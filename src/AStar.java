@@ -58,7 +58,7 @@ public class AStar {
             nodesExplored++;
 
             if (currentWord.equals(endWord)) {
-                // Path found, reconstruct and return it
+                // Path ketemu
                 List<String> path = new ArrayList<>();
                 while (!currentWord.equals(startWord)) {
                     path.add(0, currentWord);
@@ -82,7 +82,7 @@ public class AStar {
                         // Calculate heuristic for A*
                         int heuristic = Utility.calculateHeuristic(neighbor, endWord); 
                         int totalCost = newDistance + heuristic;
-                        // System.out.println("Word: " + neighbor + ", Cost: " + totalCost); // Debug: Print cost
+                        // System.out.println("Word: " + neighbor + ", Cost: " + totalCost); // Debug
                         // Add heuristic to cost for A*
                         queue.offer(new WordNode(neighbor, totalCost)); 
                     }
@@ -90,6 +90,6 @@ public class AStar {
             }
         }
 
-        return new SearchResult(Collections.emptyList(), nodesExplored, 0, 0); // No path found
+        return new SearchResult(Collections.emptyList(), nodesExplored, 0, 0); //Tidak ada path
     }
 }

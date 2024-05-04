@@ -134,61 +134,20 @@ public class Utility {
             return diffCount == 1;
         }
 
-           
-    // public static int calculateHeuristic(String currentWord, String endWord) {
-    //     // Calculate the Levenshtein Distance
-    //     int[][] dp = new int[currentWord.length() + 1][endWord.length() + 1];
-    
-
-    //     for (int i = 0; i <= currentWord.length(); i++) {
-    //         dp[i][0] = i;
-    //     }
-    //     for (int j = 0; j <= endWord.length(); j++) {
-    //         dp[0][j] = j;
-    //     }
-    
-    //     for (int i = 1; i <= currentWord.length(); i++) {
-    //         for (int j = 1; j <= endWord.length(); j++) {
-    //             if (currentWord.charAt(i - 1) == endWord.charAt(j - 1)) {
-    //                 dp[i][j] = dp[i - 1][j - 1];
-    //             } else {
-    //                 dp[i][j] = 1 + Math.min(Math.min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]);
-    //             }
-    //         }
-    //     }
-    
-    //     return dp[currentWord.length()][endWord.length()];
-    // }
 
     public static int calculateHeuristic(String currentWord, String endWord) {
         int diffCount = 0;
-    
-        // Ensure both words have the same length
-        int minLength = Math.min(currentWord.length(), endWord.length());
-    
-        // Iterate over the characters of the words and count the differences
-        for (int i = 0; i < minLength; i++) {
+
+        for (int i = 0; i < currentWord.length(); i++) {
             if (currentWord.charAt(i) != endWord.charAt(i)) {
                 diffCount++;
             }
         }
     
-        // Add the difference in lengths, if any
-        diffCount += Math.abs(currentWord.length() - endWord.length());
-    
         return diffCount;
     }
     
-    private static void printPath(List<String> path) {
-        for (int i = 0; i < path.size(); i++) {
-            System.out.print(path.get(i));
-            if (i != path.size() - 1) {
-                System.out.print(" -> ");
-            }
-        }
-        System.out.println();
-    }
-
+  
     public class PathPrinter {
         public static void printResults( List<String> shortestPath, int nodesExplored, long memoryUsed, long runtime) {
             
@@ -208,38 +167,7 @@ public class Utility {
             }
             System.out.println();
         }
-    }
-
-    public static class SearchResult {
-        private List<String> path;
-        private int nodesExplored;
-        private long memoryUsed;
-        private long runtime;
-    
-        public SearchResult(List<String> path, int nodesExplored, long memoryUsed, long runtime) {
-            this.path = path;
-            this.nodesExplored = nodesExplored;
-            this.memoryUsed = memoryUsed;
-            this.runtime = runtime;
-        }
-    
-        public List<String> getPath() {
-            return path;
-        }
-    
-        public int getNodesExplored() {
-            return nodesExplored;
-        }
-    
-        public long getMemoryUsed() {
-            return memoryUsed;
-        }
-    
-        public long getRuntime() {
-            return runtime;
-        }
-    }
-    
+    }  
 }
 
 
