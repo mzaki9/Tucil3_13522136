@@ -4,6 +4,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+
+        /* Jika ingin memuat database baru silahkan uncomment ini ! */
         // // Membaca kata-kata dari file dan menyimpannya dalam Map
         // Map<Integer, List<String>> wordMap = Utility.readWordsFromFile("data.txt");
 
@@ -34,9 +36,7 @@ public class Main {
         }
 
         
-       
-
-        
+    
         System.out.print("Masukkan kata awal: ");
         String startWord = scanner.nextLine().trim().toLowerCase();
 
