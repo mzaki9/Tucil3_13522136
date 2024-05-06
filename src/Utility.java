@@ -58,7 +58,7 @@ public class Utility {
     }
 
        // Fungsi untuk membaca kata-kata dari file dan menyimpannya dalam Map
-    private static Map<Integer, List<String>> readWordsFromFile(String filename) {
+    public static Map<Integer, List<String>> readWordsFromFile(String filename) {
         Map<Integer, List<String>> wordMap = new HashMap<>();
 
         try {
@@ -80,7 +80,7 @@ public class Utility {
     }
 
     // Fungsi untuk membuat graf word ladder menggunakan multithreading
-    private static Map<String, List<String>> buildWordGraphMultiThread(Map<Integer, List<String>> wordMap) {
+    public static Map<String, List<String>> buildWordGraphMultiThread(Map<Integer, List<String>> wordMap) {
         Map<String, List<String>> wordGraph = new HashMap<>();
         ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
