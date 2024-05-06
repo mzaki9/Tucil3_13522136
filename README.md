@@ -11,7 +11,7 @@ Untuk menyelesaikan permainan word ladder, kita dapat menggunakan berbagai algor
 
     2.Greedy Best First Search: Pencarian ini memprioritaskan node berdasarkan perkiraan jarak langsung ke tujuan. Algoritma ini cenderung memilih jalur yang terlihat paling dekat dengan solusi, tanpa mempertimbangkan biaya sebenarnya untuk mencapainya.
 
-   3. A*: Pencarian ini menggabungkan keunggulan UCS dan Greedy Best First Search dengan menggunakan fungsi evaluasi yang menggabungkan biaya sejauh ini (G) dan estimasi biaya yang tersisa hingga tujuan (H). Algoritma ini berusaha untuk menemukan jalur dengan biaya total terendah.
+    3. A*: Pencarian ini menggabungkan keunggulan UCS dan Greedy Best First Search dengan menggunakan fungsi evaluasi yang menggabungkan biaya sejauh ini (G) dan estimasi biaya yang tersisa hingga tujuan (H). Algoritma ini berusaha untuk menemukan jalur dengan biaya total terendah.
 
 
 
@@ -31,12 +31,12 @@ Untuk menyelesaikan permainan word ladder, kita dapat menggunakan berbagai algor
 
 
    
-1. CLONE THIS REPO
+1. Clone this repo
 
    ```
    git clone https://github.com/mzaki9/Tucil3_13522136
    ```
-2. GO TO SRC
+2. Go to src
    
 ```sh
    cd src/
