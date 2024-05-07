@@ -27,9 +27,9 @@ public class Main {
         scanner.nextLine();
 
         if(choice == 1){
-            loadedWordGraph = Utility.loadWordGraphFromFile("data_graph.txt");
+            loadedWordGraph = Utility.loadWordGraphFromFile("../data/data_graph.txt");
         } else if(choice == 2){
-            loadedWordGraph = Utility.loadWordGraphFromFile("word_graph.txt");
+            loadedWordGraph = Utility.loadWordGraphFromFile("../data/word_graph.txt");
         } else {
             System.out.println("Pilihan tidak valid.");
             return;
